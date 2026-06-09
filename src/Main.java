@@ -55,10 +55,8 @@ public class Main {
                 int impar = (u % 2 != 0) ? u : v;
                 int par   = (u % 2 != 0) ? v : u;
 
-                if (fatores.get(par).containsKey(p) && fatores.get(impar).containsKey(p)) {
-                    int capEsquerda = fatores.get(par).get(p);
-                    G.addEdge(new FlowEdge(par, impar, capEsquerda));
-                }
+                int capEsquerda = fatores.get(par).get(p) == null ? 0 : fatores.get(par).get(p);
+                G.addEdge(new FlowEdge(par, impar, capEsquerda));
             }
 
             FordFulkerson maxFlow = new FordFulkerson(G, s, t);
