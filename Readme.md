@@ -1,8 +1,11 @@
 # Array and Operations — Codeforces 498C
 
 **Problema:** Array and Operations
+
 **Link:** <https://codeforces.com/problemset/problem/498/C>
+
 **Grupo D — Trabalho Prático 3**
+
 **Disciplina:** Resolução de Problemas com Grafos
 
 ## Integrantes
