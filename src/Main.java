@@ -40,7 +40,7 @@ public class Main {
 
                 int qtd = fatores.get(i).get(p);
 
-                if (i % 2 != 0) {
+                if (i % 2 == 0) {
                     G.addEdge(new FlowEdge(s, i, qtd));
                     continue;
                 }
@@ -55,9 +55,9 @@ public class Main {
                 int impar = (u % 2 != 0) ? u : v;
                 int par   = (u % 2 != 0) ? v : u;
 
-                if (fatores.get(impar).containsKey(p) && fatores.get(par).containsKey(p)) {
-                    int capEsquerda = fatores.get(impar).get(p);
-                    G.addEdge(new FlowEdge(impar, par, capEsquerda));
+                if (fatores.get(par).containsKey(p) && fatores.get(impar).containsKey(p)) {
+                    int capEsquerda = fatores.get(par).get(p);
+                    G.addEdge(new FlowEdge(par, impar, capEsquerda));
                 }
             }
 
